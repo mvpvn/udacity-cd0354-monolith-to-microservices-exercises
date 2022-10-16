@@ -1,19 +1,20 @@
-# Monolith to Microservices Exercise and Demo Code
+# Overview
 
-This repo contains code for all of the exercises in the Monolith to Microservices at Scale
+This is a very simple, bare-bones NodeJS project created for you to use with Docker.
 
-## Lesson 1: Introduction to Microservices
+## Local Setup
 
-No exercise or demos code
+**_Note_**: This is only needed if you want to run the app locally. You don't need to install the dependencies or run the server if you are running the code inside a Docker container.
 
-## Lesson 2: Microservices Design Principles and Best Practices
+- Install dependencies: `npm install`
+- Run server: `node server.js`
 
-No exercise or demos code
+## Container Setup
 
-## Lesson 3: Containers Using Docker
+- Build image: `docker build .`
+- Run container with image: `docker run {image_id}` where `image_id` can be retrieved by running `docker images` and found under the column `IMAGE ID`
+- You can use the `-d` flag to run the container in the background. This will enable you to run other commands in your terminal while the container is running.
 
-### Exercise Code
+## Container Teardown
 
-- [Create a Docker App](lesson-3-containers/exercises/docker-app-exercise/README.md)
-- [Debugging](lesson-3-containers/exercises/debugging-exercise/README.md)
-- [Base Images](lesson-3-containers/exercises/base-images-exercise/README.md)
+- Remove container: `docker kill {container_id}` where `container_id` can be retrieved by running `docker ps` and found under the column `CONTAINER ID`
